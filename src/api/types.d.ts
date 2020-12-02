@@ -1,3 +1,5 @@
+import { inflate } from "zlib";
+
 export interface IArticleData {
   id: number
   status: string
@@ -41,4 +43,25 @@ export interface IUserData {
   avatar: string
   introduction: string
   roles: string[]
+}
+// 英雄 
+export interface Hero {
+  id: number
+  name: string
+  icon: string
+  classify: string[]
+}
+
+// 玩家
+export interface Palyer {
+  id: number
+  accountname: string
+  nickname: string
+  avater: string
+  level: number
+  exp: number
+  rank: number
+  bravepoints: number // 勇者积分
+  winningstreak: number // 连胜场次
+  wanttoplay: Hero[] // 想玩的英雄
 }
